@@ -141,7 +141,7 @@ AngryBirds.Preloader.prototype = {
 		this.load.image("imageLevelSelectorBlocked", imageLevelSelectorBlocked);
 		this.load.image("imageLevelSelectorCompleted", imageLevelSelectorCompleted);
 		this.load.image("imageLevelSelectorGoBack", imageLevelSelectorGoBack);
-		this.load.image("imageEpisodeIntro", imageEpisodeIntro);
+		this.load.image("imageEpisodeIntro", 'mo_assets/episode-intro.png');
 		this.load.image("imageGameBackground", imageGameBackground);
 		this.load.image("imageGameFloor", imageGameFloor);
 		this.load.image("imageGameGrassBack", imageGameGrassBack);
