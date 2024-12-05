@@ -131,6 +131,7 @@ AngryBirds.Preloader.prototype = {
         this.load.image("imageLevelSelectorGoBack", imageLevelSelectorGoBack);
         this.load.image("imageEpisodeIntro", 'mo_assets/episode-intro.png');
         this.load.image("imageGameBackground", imageGameBackground);
+		this.load.image("imageGameBackgroundHome", 'mo_assets/home-page-background.png');
         this.load.image("imageGameFloor", imageGameFloor);
         this.load.image("imageGameGrassBack", imageGameGrassBack);
         this.load.image("imageGameGrassFront", imageGameGrassFront);
@@ -524,7 +525,7 @@ AngryBirds.Menu.prototype = {
     create: function()
     {
         // ADDING THE BACKGROUND
-        this.menuBackgroundImage = this.add.tileSprite(0, 0, this.game.world.width, this.game.world.height, "imageGameBackground");
+        this.menuBackgroundImage = this.add.tileSprite(0, 0, this.game.world.width, this.game.world.height, "imageGameBackgroundHome");
 
         // ADDING THE FLOOR
         this.menuFloor = this.add.tileSprite(0, this.game.world.height - 48, this.game.world.width, 48, "imageGameFloor");
