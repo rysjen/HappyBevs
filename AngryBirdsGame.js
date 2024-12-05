@@ -124,7 +124,7 @@ AngryBirds.Preloader.prototype = {
         this.load.image("imageMenuSoundOff", imageMenuSoundOff);
         this.load.image("imageLevelSelectorBackground", "mo_assets/level-select.png");
         this.load.image("imageLevelSelectorLeftImage", "mo_assets/car-main.png");
-        this.load.image("imageLevelSelectorRightImage", "mo_assets/powerup.png");
+        this.load.image("imageLevelSelectorRightImage", "mo_assets/motability-logo.png");
         this.load.image("imageLevelSelectorLevel", imageLevelSelectorLevel);
         this.load.image("imageLevelSelectorBlocked", imageLevelSelectorBlocked);
         this.load.image("imageLevelSelectorCompleted", imageLevelSelectorCompleted);
@@ -725,8 +725,8 @@ AngryBirds.LevelSelector.prototype = {
 
         // ADDING THE RIGHT IMAGE
         this.levelSelectorRightImage = this.add.sprite(0, 0, "imageLevelSelectorRightImage");
-        this.levelSelectorRightImage.position.x = game.width - this.levelSelectorRightImage.width * 1.5;
-        this.levelSelectorRightImage.position.y = game.height - this.levelSelectorRightImage.height * 1.5;
+        this.levelSelectorRightImage.position.x = game.width - this.levelSelectorRightImage.width * 2.47;
+        this.levelSelectorRightImage.position.y = game.height - this.levelSelectorRightImage.height * 1.72;
 
         // GETTING ALL THE SOLVED LEVELS
         var solvedLevels = parseInt(game.state.states["AngryBirds.SplashGame"].getSolvedLevels());
