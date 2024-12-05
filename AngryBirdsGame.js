@@ -554,7 +554,7 @@ AngryBirds.Menu.prototype = {
 		// ADDING THE PLAY BUTTON HANDLER
 		this.menuPlayHandler = game.add.graphics();
 		this.menuPlayHandler.beginFill(0x000000, 0);
-		this.menuPlayHandler.drawRect(309, 232, 163, 85, 10);
+		this.menuPlayHandler.drawRect(220, 100, 320, 220, 10);
 		this.menuPlayHandler.inputEnabled = true;
 		this.menuPlayHandler.events.onInputUp.add(function()
 			{
