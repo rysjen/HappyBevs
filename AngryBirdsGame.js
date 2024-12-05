@@ -152,7 +152,7 @@ AngryBirds.Preloader.prototype = {
 		this.load.image("imageGamePole", imageGamePole);
 		this.load.image("imageGamePoleLeft", imageGamePoleLeft);
 		this.load.image("imageGamePoleRight", imageGamePoleRight);
-		this.load.image("imageGameBird", imageGameBird);
+		this.load.image("imageGameBird", "mo_assets/car-main.png");
 		this.load.spritesheet("imageGamePig", imageGamePig, 48, 46, 6, 1, 2);
 		this.load.image("imageGameBoxLight", imageGameBoxLight);
 		this.load.image("imageGameBoxHeavy", imageGameBoxHeavy);
