@@ -119,7 +119,7 @@ AngryBirds.Preloader.prototype = {
 		// LOADING THE IMAGES
 		this.load.image("imageSplash", imageSplash);
 		this.load.image("imageMenuTitle", imageMenuTitle);
-		this.load.image("imageMenuPlay", imageMenuPlay);
+		this.load.image("imageMenuPlay", 'mo_assets/menu-play.jpg');
 		this.load.image("imageMenuSoundOn", imageMenuSoundOn);
 		this.load.image("imageMenuSoundOff", imageMenuSoundOff);
 		this.load.image("imageLevelSelectorBackground", imageLevelSelectorBackground);
@@ -207,7 +207,7 @@ AngryBirds.Splash.prototype = {
 		{
 		// SETTING THE BACKGROUND COLOR
 		this.stage.backgroundColor = "#FFFFFF";
-        game.state.start("AngryBirds.Disclaimer", Phaser.Plugin.StateTransition.Out.SlideLeft);
+        game.state.start("AngryBirds.Menu", Phaser.Plugin.StateTransition.Out.SlideLeft);
 		}
 	};
 
@@ -536,19 +536,19 @@ AngryBirds.Menu.prototype = {
 		this.menuFloorGrassFront = this.add.tileSprite(0, this.game.world.height - 60, this.game.world.width, this.game.world.height - 420, "imageGameGrassFront");
 
 		// ADDING THE GAME TITLE
-		this.menuTitle = this.add.sprite(0, 25, "imageMenuTitle");
-		this.menuTitle.position.x = game.width / 2 - this.menuTitle.width / 2;
+		// this.menuTitle = this.add.sprite(0, 25, "imageMenuTitle");
+		// this.menuTitle.position.x = game.width / 2 - this.menuTitle.width / 2;
 
 		// ADDING THE PLAY BUTTON
 		this.menuPlay = this.add.sprite(0, 155, "imageMenuPlay");
 		this.menuPlay.position.x = game.width / 2 - this.menuPlay.width / 2;
 
 		// ADDING THE PLAY BUTTON TEXT
-		this.menuPlayText = game.add.bitmapText(0, 250, "AngryBirdsFontLight", STRING_PLAY, 40);
-		this.menuPlayText.width = STRING_PLAYWIDTH;
-		this.menuPlayText.position.x = Math.floor(game.width / 2 - this.menuPlayText.width / 2 - 1);
-		this.menuPlayText.position.y = Math.floor(game.height / 2 - this.menuPlayText.height / 2 + 48);
-		this.menuPlayText.fixedToCamera = true;
+		// this.menuPlayText = game.add.bitmapText(0, 250, "AngryBirdsFontLight", STRING_PLAY, 40);
+		// this.menuPlayText.width = STRING_PLAYWIDTH;
+		// this.menuPlayText.position.x = Math.floor(game.width / 2 - this.menuPlayText.width / 2 - 1);
+		// this.menuPlayText.position.y = Math.floor(game.height / 2 - this.menuPlayText.height / 2 + 48);
+		// this.menuPlayText.fixedToCamera = true;
 
 		// ADDING THE PLAY BUTTON HANDLER
 		this.menuPlayHandler = game.add.graphics();
