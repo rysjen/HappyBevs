@@ -343,7 +343,7 @@ AngryBirds.Disclaimer.prototype = {
 				}
 
 			// LOADING THE GAME SPLASH
-			game.state.start("AngryBirds.SplashGame", Phaser.Plugin.StateTransition.Out.SlideLeft);
+			game.state.start("AngryBirds.Menu", Phaser.Plugin.StateTransition.Out.SlideLeft);
 			}, this);
 		},
 
