@@ -900,7 +900,7 @@ AngryBirds.EpisodeIntro.prototype = {
             game.time.events.add(2000, function()
             {
                 // MOVING SMOOTHLY THE CAMERA TO THE END OF THE IMAGE
-                game.add.tween(game.state.states["AngryBirds.EpisodeIntro"].imageSplash.position).to({x: -(game.state.states["AngryBirds.EpisodeIntro"].imageSplash.width - game.width)}, 12000, Phaser.Easing.Linear.None, true).onComplete.add(function()
+                game.add.tween(game.state.states["AngryBirds.EpisodeIntro"].imageSplash.position).to({x: -(game.state.states["AngryBirds.EpisodeIntro"].imageSplash.width - game.width)}, 6500, Phaser.Easing.Linear.None, true).onComplete.add(function()
                 {
                     // WAITING 1000 MS
                     game.time.events.add(1000, function()
