@@ -720,8 +720,8 @@ AngryBirds.LevelSelector.prototype = {
 		this.levelSelectorBackgroundImage = this.add.sprite(0, 0, "imageLevelSelectorBackground");
 
 		// ADDING THE LEFT IMAGE
-		this.levelSelectorLeftImage = this.add.sprite(0, 0, "imageLevelSelectorLeftImage");
-		this.levelSelectorLeftImage.position.y = game.height - this.levelSelectorLeftImage.height * 1.5;
+		// this.levelSelectorLeftImage = this.add.sprite(0, 0, "imageLevelSelectorLeftImage");
+		// this.levelSelectorLeftImage.position.y = game.height - this.levelSelectorLeftImage.height * 1.5;
 
 		// ADDING THE RIGHT IMAGE
 		this.levelSelectorRightImage = this.add.sprite(0, 0, "imageLevelSelectorRightImage");
