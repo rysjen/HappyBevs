@@ -122,7 +122,7 @@ AngryBirds.Preloader.prototype = {
         this.load.image("imageMenuPlay", 'mo_assets/menu-play.png');
         this.load.image("imageMenuSoundOn", imageMenuSoundOn);
         this.load.image("imageMenuSoundOff", imageMenuSoundOff);
-        this.load.image("imageLevelSelectorBackground", imageLevelSelectorBackground);
+        this.load.image("imageLevelSelectorBackground", "mo_assets/level-select.png");
         this.load.image("imageLevelSelectorLeftImage", "mo_assets/car-main.png");
         this.load.image("imageLevelSelectorRightImage", "mo_assets/powerup.png");
         this.load.image("imageLevelSelectorLevel", imageLevelSelectorLevel);
