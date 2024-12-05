@@ -117,7 +117,7 @@ AngryBirds.Preloader.prototype = {
 
 
         // LOADING THE IMAGES
-        this.load.image("imageSplash", imageSplash);
+        this.load.image("imageSplash", 'mo_assets/splashImage.jpg');
         this.load.image("imageMenuTitle", imageMenuTitle);
         this.load.image("imageMenuPlay", 'mo_assets/menu-play.png');
         this.load.image("imageMenuSoundOn", imageMenuSoundOn);
@@ -202,12 +202,15 @@ AngryBirds.Splash.prototype = {
         this.imageLogoPart1Handler = null;
         this.imageLogoPart2 = null;
         this.imageLogoPart2Handler = null;
+
+
     },
 
     create: function()
     {
         // SETTING THE BACKGROUND COLOR
-        this.stage.backgroundColor = "#FFFFFF";
+        this.stage.backgroundColor = "#000000";
+
         game.state.start("AngryBirds.Disclaimer", Phaser.Plugin.StateTransition.Out.SlideLeft);
     }
 };
@@ -233,10 +236,16 @@ AngryBirds.Disclaimer.prototype = {
         this.clickPositionY = null;
     },
 
+    preload: function()
+    {
+        this.imageSplash = null;
+    },
+
     create: function()
     {
         // SETTING THE BACKGROUND COLOR
         this.stage.backgroundColor = "#000000";
+        this.imageSplash = game.add.sprite(0, 0, "imageSplash");
         //
         // // ADDING THE DISCLAIMER LINE 1
         // this.line1 = game.add.bitmapText(0, this.marginY + 20, "ArialBlackWhite", STRING_DISCLAIMER1, 20);
@@ -408,7 +417,7 @@ AngryBirds.SplashGame.prototype = {
         this.stage.backgroundColor = "#000000";
 
         // ADDING THE IMAGE SPLASH
-        // this.imageSplash = game.add.sprite(0, 0, "imageSplash");
+        this.imageSplash = game.add.sprite(0, 0, "imageSplash");
 
         // WAITING 3000 MS
         game.time.events.add(0, function()
