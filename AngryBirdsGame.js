@@ -208,7 +208,7 @@ AngryBirds.Splash.prototype = {
     {
         // SETTING THE BACKGROUND COLOR
         this.stage.backgroundColor = "#FFFFFF";
-        game.state.start("AngryBirds.Menu", Phaser.Plugin.StateTransition.Out.SlideLeft);
+        game.state.start("AngryBirds.Disclaimer", Phaser.Plugin.StateTransition.Out.SlideLeft);
     }
 };
 
@@ -237,69 +237,69 @@ AngryBirds.Disclaimer.prototype = {
     {
         // SETTING THE BACKGROUND COLOR
         this.stage.backgroundColor = "#000000";
-
-        // ADDING THE DISCLAIMER LINE 1
-        this.line1 = game.add.bitmapText(0, this.marginY + 20, "ArialBlackWhite", STRING_DISCLAIMER1, 20);
-        this.line1.height = 25;
-        this.line1.tint = 0xFF0000;
-        this.line1.position.x = game.width / 2 - this.line1.width / 2;
-
-        // ADDING THE DISCLAIMER LINE 2
-        this.line2 = game.add.bitmapText(0, this.marginY + 90, "ArialBlackWhite", STRING_DISCLAIMER2, 20);
-        this.line2.height = 25;
-        this.line2.position.x = game.width / 2 - this.line2.width / 2;
-
-        // ADDING THE DISCLAIMER LINE 3
-        this.line3 = game.add.bitmapText(0, this.marginY + 130, "ArialBlackWhite", STRING_DISCLAIMER3, 20);
-        this.line3.height = 25;
-        this.line3.position.x = game.width / 2 - this.line3.width / 2;
-
-        // ADDING THE DISCLAIMER LINE 4
-        this.line4 = game.add.bitmapText(0, this.marginY + 170, "ArialBlackWhite", STRING_DISCLAIMER4, 20);
-        this.line4.height = 25;
-        this.line4.position.x = game.width / 2 - this.line4.width / 2;
-
-        // CHECKING THE USER LANGUAGE IS RUNNING THE GAME IN SPANISH
-        if (userLanguage.substring(0,2)=="es")
-        {
-            // ADDING A SPANISH ACCENT TO AN SPECIFIC WORD IN THE DISCLAIMER LINE 4
-            this.line4Accent = game.add.bitmapText(0, this.line4.position.y - 5, "ArialBlackWhite", "´", 20);
-            this.line4Accent.height = 24;
-            this.line4Accent.position.x = this.line4.position.x + 190;
-        }
-
-        // ADDING THE DISCLAIMER LINE 5
-        this.line5 = game.add.bitmapText(0, this.marginY + 210, "ArialBlackWhite", STRING_DISCLAIMER5, 20);
-        this.line5.height = 25;
-        this.line5.position.x = game.width / 2 - this.line5.width / 2;
-
-        // ADDING THE DISCLAIMER LINE 6
-        this.line6 = game.add.bitmapText(0, this.marginY + 250, "ArialBlackWhite", STRING_DISCLAIMER6, 20);
-        this.line6.height = 25;
-        this.line6.position.x = game.width / 2 - this.line6.width / 2;
-
-        // ADDING THE DISCLAIMER LINE 7
-        this.line7 = game.add.bitmapText(0, this.marginY + 290, "ArialBlackWhite", STRING_DISCLAIMER7, 20);
-        this.line7.height = 25;
-        this.line7.position.x = game.width / 2 - this.line7.width / 2;
-
-        // CHECKING IF IT IS A MOBILE DEVICE
-        if (isMobileDevice()==true)
-        {
-            // ADDING THE DISCLAIMER LINE 8 FOR MOBILE DEVICES
-            this.line8 = game.add.bitmapText(0, this.marginY + 360, "ArialBlackWhite", STRING_DISCLAIMER8_MOBILE, 20);
-            this.line8.height = 25;
-            this.line8.tint = 0x228B22;
-            this.line8.position.x = game.width / 2 - this.line8.width / 2;
-        }
-        else
-        {
-            // ADDING THE DISCLAIMER LINE 8 FOR DESKTOP DEVICES
-            this.line8 = game.add.bitmapText(0, this.marginY + 360, "ArialBlackWhite", STRING_DISCLAIMER8_DESKTOP, 20);
-            this.line8.height = 25;
-            this.line8.tint = 0x228B22;
-            this.line8.position.x = game.width / 2 - this.line8.width / 2;
-        }
+        //
+        // // ADDING THE DISCLAIMER LINE 1
+        // this.line1 = game.add.bitmapText(0, this.marginY + 20, "ArialBlackWhite", STRING_DISCLAIMER1, 20);
+        // this.line1.height = 25;
+        // this.line1.tint = 0xFF0000;
+        // this.line1.position.x = game.width / 2 - this.line1.width / 2;
+        //
+        // // ADDING THE DISCLAIMER LINE 2
+        // this.line2 = game.add.bitmapText(0, this.marginY + 90, "ArialBlackWhite", STRING_DISCLAIMER2, 20);
+        // this.line2.height = 25;
+        // this.line2.position.x = game.width / 2 - this.line2.width / 2;
+        //
+        // // ADDING THE DISCLAIMER LINE 3
+        // this.line3 = game.add.bitmapText(0, this.marginY + 130, "ArialBlackWhite", STRING_DISCLAIMER3, 20);
+        // this.line3.height = 25;
+        // this.line3.position.x = game.width / 2 - this.line3.width / 2;
+        //
+        // // ADDING THE DISCLAIMER LINE 4
+        // this.line4 = game.add.bitmapText(0, this.marginY + 170, "ArialBlackWhite", STRING_DISCLAIMER4, 20);
+        // this.line4.height = 25;
+        // this.line4.position.x = game.width / 2 - this.line4.width / 2;
+        //
+        // // CHECKING THE USER LANGUAGE IS RUNNING THE GAME IN SPANISH
+        // if (userLanguage.substring(0,2)=="es")
+        // {
+        //     // ADDING A SPANISH ACCENT TO AN SPECIFIC WORD IN THE DISCLAIMER LINE 4
+        //     this.line4Accent = game.add.bitmapText(0, this.line4.position.y - 5, "ArialBlackWhite", "´", 20);
+        //     this.line4Accent.height = 24;
+        //     this.line4Accent.position.x = this.line4.position.x + 190;
+        // }
+        //
+        // // ADDING THE DISCLAIMER LINE 5
+        // this.line5 = game.add.bitmapText(0, this.marginY + 210, "ArialBlackWhite", STRING_DISCLAIMER5, 20);
+        // this.line5.height = 25;
+        // this.line5.position.x = game.width / 2 - this.line5.width / 2;
+        //
+        // // ADDING THE DISCLAIMER LINE 6
+        // this.line6 = game.add.bitmapText(0, this.marginY + 250, "ArialBlackWhite", STRING_DISCLAIMER6, 20);
+        // this.line6.height = 25;
+        // this.line6.position.x = game.width / 2 - this.line6.width / 2;
+        //
+        // // ADDING THE DISCLAIMER LINE 7
+        // this.line7 = game.add.bitmapText(0, this.marginY + 290, "ArialBlackWhite", STRING_DISCLAIMER7, 20);
+        // this.line7.height = 25;
+        // this.line7.position.x = game.width / 2 - this.line7.width / 2;
+        //
+        // // CHECKING IF IT IS A MOBILE DEVICE
+        // if (isMobileDevice()==true)
+        // {
+        //     // ADDING THE DISCLAIMER LINE 8 FOR MOBILE DEVICES
+        //     this.line8 = game.add.bitmapText(0, this.marginY + 360, "ArialBlackWhite", STRING_DISCLAIMER8_MOBILE, 20);
+        //     this.line8.height = 25;
+        //     this.line8.tint = 0x228B22;
+        //     this.line8.position.x = game.width / 2 - this.line8.width / 2;
+        // }
+        // else
+        // {
+        //     // ADDING THE DISCLAIMER LINE 8 FOR DESKTOP DEVICES
+        //     this.line8 = game.add.bitmapText(0, this.marginY + 360, "ArialBlackWhite", STRING_DISCLAIMER8_DESKTOP, 20);
+        //     this.line8.height = 25;
+        //     this.line8.tint = 0x228B22;
+        //     this.line8.position.x = game.width / 2 - this.line8.width / 2;
+        // }
 
         // SETTING THAT WILL HAPPEN WHEN THE USER STARTS TOUCHING THE SCREEN OR MOUSE DOWN
         this.game.input.onDown.add(function()
@@ -344,7 +344,7 @@ AngryBirds.Disclaimer.prototype = {
             }
 
             // LOADING THE GAME SPLASH
-            game.state.start("AngryBirds.Menu", Phaser.Plugin.StateTransition.Out.SlideLeft);
+            game.state.start("AngryBirds.SplashGame", Phaser.Plugin.StateTransition.Out.SlideLeft);
         }, this);
     },
 
@@ -405,10 +405,10 @@ AngryBirds.SplashGame.prototype = {
     create: function()
     {
         // SETTING THE BACKGROUND COLOR
-        this.stage.backgroundColor = "#FFFFFF";
+        this.stage.backgroundColor = "#000000";
 
         // ADDING THE IMAGE SPLASH
-        this.imageSplash = game.add.sprite(0, 0, "imageSplash");
+        // this.imageSplash = game.add.sprite(0, 0, "imageSplash");
 
         // WAITING 3000 MS
         game.time.events.add(0, function()
