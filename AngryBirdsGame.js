@@ -119,12 +119,12 @@ AngryBirds.Preloader.prototype = {
 		// LOADING THE IMAGES
 		this.load.image("imageSplash", imageSplash);
 		this.load.image("imageMenuTitle", imageMenuTitle);
-		this.load.image("imageMenuPlay", 'mo_assets/menu-play.jpg');
+		this.load.image("imageMenuPlay", 'mo_assets/menu-play.png');
 		this.load.image("imageMenuSoundOn", imageMenuSoundOn);
 		this.load.image("imageMenuSoundOff", imageMenuSoundOff);
 		this.load.image("imageLevelSelectorBackground", imageLevelSelectorBackground);
-		this.load.image("imageLevelSelectorLeftImage", imageLevelSelectorLeftImage);
-		this.load.image("imageLevelSelectorRightImage", imageLevelSelectorRightImage);
+		this.load.image("imageLevelSelectorLeftImage", "mo_assets/car-main.png");
+		this.load.image("imageLevelSelectorRightImage", "mo_assets/powerup.png");
 		this.load.image("imageLevelSelectorLevel", imageLevelSelectorLevel);
 		this.load.image("imageLevelSelectorBlocked", imageLevelSelectorBlocked);
 		this.load.image("imageLevelSelectorCompleted", imageLevelSelectorCompleted);
@@ -542,6 +542,7 @@ AngryBirds.Menu.prototype = {
 		// ADDING THE PLAY BUTTON
 		this.menuPlay = this.add.sprite(0, 155, "imageMenuPlay");
 		this.menuPlay.position.x = game.width / 2 - this.menuPlay.width / 2;
+		this.menuPlay.position.y = Math.floor(game.height / 2 - this.menuPlay.height / 2 - 10 );
 
 		// ADDING THE PLAY BUTTON TEXT
 		// this.menuPlayText = game.add.bitmapText(0, 250, "AngryBirdsFontLight", STRING_PLAY, 40);
@@ -720,12 +721,12 @@ AngryBirds.LevelSelector.prototype = {
 
 		// ADDING THE LEFT IMAGE
 		this.levelSelectorLeftImage = this.add.sprite(0, 0, "imageLevelSelectorLeftImage");
-		this.levelSelectorLeftImage.position.y = game.height - this.levelSelectorLeftImage.height;
+		this.levelSelectorLeftImage.position.y = game.height - this.levelSelectorLeftImage.height * 1.5;
 
 		// ADDING THE RIGHT IMAGE
 		this.levelSelectorRightImage = this.add.sprite(0, 0, "imageLevelSelectorRightImage");
-		this.levelSelectorRightImage.position.x = game.width - this.levelSelectorRightImage.width;
-		this.levelSelectorRightImage.position.y = game.height - this.levelSelectorRightImage.height;
+		this.levelSelectorRightImage.position.x = game.width - this.levelSelectorRightImage.width * 1.5;
+		this.levelSelectorRightImage.position.y = game.height - this.levelSelectorRightImage.height * 1.5;
 
 		// GETTING ALL THE SOLVED LEVELS
 		var solvedLevels = parseInt(game.state.states["AngryBirds.SplashGame"].getSolvedLevels());
