@@ -151,9 +151,10 @@ AngryBirds.Preloader.prototype = {
 		this.load.image("imageGamePoleLeft", imageGamePoleLeft);
 		this.load.image("imageGamePoleRight", imageGamePoleRight);
 		this.load.image("imageGameBird", "mo_assets/car-main.png");
-		this.load.spritesheet("imageGamePig", imageGamePig, 48, 46, 6, 1, 2);
-		this.load.image("imageGameBoxLight", imageGameBoxLight);
-		this.load.image("imageGameBoxHeavy", imageGameBoxHeavy);
+		// this.load.spritesheet("imageGamePig", "mo_assets/powerup.png", 48, 46, 6, 1, 2);
+		this.load.image("imageGamePig", "mo_assets/powerup.png");
+		this.load.image("imageGameBoxLight", "mo_assets/petrol-can.png");
+		this.load.image("imageGameBoxHeavy", "mo_assets/petrol-can-green.png");
 		this.load.spritesheet("imageGameExplosion", imageGameExplosion, 48, 48, 5, 1, 2);
 		this.load.image("imageGameNext", imageGameNext);
 		this.load.image("imageGameMenu", imageGameMenu);
@@ -1216,9 +1217,9 @@ AngryBirds.Game.prototype = {
 		// LOOPING ALL THE ENEMIES
 		for (var i=0;i<this.enemies.children.length;i++)
 			{
-			// ADDING THE ENEMY ANIMATIONS
-			this.enemies.children[i].animations.add("stand", [1, 2, 0]);
-			this.enemies.children[i].animations.add("win", [2]);
+			// // ADDING THE ENEMY ANIMATIONS
+			// this.enemies.children[i].animations.add("stand", [1, 2, 0]);
+			// this.enemies.children[i].animations.add("win", [2]);
 
 			// PLAYING THE ENEMY STAND ANIMATION
 			this.enemies.children[i].animations.play("stand", 0.5, true);
